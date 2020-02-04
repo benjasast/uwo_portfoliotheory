@@ -128,11 +128,9 @@ grows linearly as there is no interacting covariance term.
 
 ## Portfolios of US equities and bonds
 
-The exercise here will be first to check how the expected return and SD
-of portfolios of US equities and bonds change, as the move the
-allocations between assets. Then we will also see how the shape of these
-portfolios changes, as we change the correlation term between bonds and
-us equities.
+We will check how the expected return and SD of portfolios of US
+equities and bonds change, as we move the allocations between assets,
+and the correlation between the assets.
 
 ``` r
 w1 <- seq(0,1,.025)
@@ -155,8 +153,7 @@ df4 <- cbind(t(w),p1_return,t(p1_sd),Corr)
 ```
 
 Now we will use the same code above to loop through different
-correlation values and add the obtained expected returns and SD to our
-dataframe.
+correlation values.
 
 ``` r
 # Corr
@@ -205,7 +202,7 @@ df4 %>%
 
 We can observe the two extreme cases. When the correlation between
 assets is -1 risk can be completely hedged. When the correlation between
-assets is 1 the portfolios move as a straight line. Any intermmediate
+assets is 1 the portfolios moves as a straight line. Any intermmediate
 case will be curve-shaped as the covariance terms gain more influence as
 we increase the asset mix.
 
